@@ -13,5 +13,6 @@ getHRUparameters <- function(prj_file) {
   HRU_area <- readPrjParameters(prj_file, "hru_area")
 
   returned <- list(HRU_name = HRU_name, HRU_SD_max = HRU_SD_max, HRU_area = HRU_area)
+  returned <- data.frame(HRU_name, HRU_SD_max, HRU_area, stringsAsFactors = FALSE)
   return(returned)
 }
