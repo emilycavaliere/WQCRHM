@@ -6,7 +6,7 @@
 #' @import tidyverse
 #' @export
 #'
-#' @examples\dontrun
+#' @examples \dontrun
 manipin <- function(pht.in) {
   #formatting dates:
   pht.in$Hours <- format(as.POSIXct(strptime(pht.in$datetime,"%Y-%m-%d %H:%M",tz="")) ,format = "%H:%M")
