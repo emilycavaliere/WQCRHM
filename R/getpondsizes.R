@@ -28,5 +28,23 @@ getpondsizes <- function(CRHM_output_file, returned) {
       pond_depth=mean(pond_depth, na.rm = T),
       pond_perimeter=mean(pond_perimeter, na.rm = T))
 
+  crhm_area<-data.frame(returned$HRU_name, returned$HRU_area)
+  crhm_area <- crhm_area[11:56,]
+  temp.crhmarea<-crhm_area %>%
+    separate(returned.HRU_name, c("wetland", "hru"), sep = "Wetland",  fill = "right", remove=F)
+  temp.crhmarea<- temp.crhmarea[c(3:4)]
+
+sd<- CRHM_daily[c(1,70:115)]
+data_long <- gather(sd, name, sd.mm, Sd.11.mean: Sd.56.mean, factor_key=TRUE)
+temp.sd<-data_long %>%
+  separate(name, c("variable", "hru","fun"), sep = "[.]",  fill = "right", remove=F)
+temp.sd$hru<-as.numeric(temp.sd$hru)
+temp.sd$hru<-as.numeric(temp.sd$hru-10)
+sd<- temp.sd[c(1,4, 6)]
+ps.w<-merge(ps.w, temp.crhmarea, by = "hru")
+ps.w<-merge(ps.w, sd, by=c("date","hru"))
+ps.w$crhm_area<-ps.w$returned.HRU_area*1000000
+ps.w$sd.m<-ps.w$sd.mm/1000
+  ps.w$volume<-ps.w$crhm_area*ps.w$sd.m
   return(ps.w)
 }
