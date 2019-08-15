@@ -21,13 +21,35 @@ df1$hru<-as.factor(df1$hru)
 #second merge:----
 df2=merge(df1, temp.outst, by = c("date","hru"), all = TRUE, sort = FALSE)
 
-#final clean up:----
+#clean up:----
 df2$date<-as.Date(df2$date, format='%Y-%m-%d')
 df2$hru<-as.factor(df2$hru)
 df<-df2[complete.cases(df2), ]
 
 df$year<-year(df$date)
 df$month<-month(df$date)
+
+#fix units:----
+
+df<-df%>%
+  group_by(date, hru) %>%
+  mutate(
+    condense=(condense/1000)*pond_area,
+    isd=(isd/1000)*pond_area,
+    isr=(isr/1000)*pond_area,
+    ri=(ri/1000)*pond_area,
+    mr=(mr/1000)*pond_area,
+    rre=(rre/1000)*pond_area,
+    rr=(rr/1000)*pond_area,
+    mi=(mi/1000)*pond_area,
+    gw=(gw/1000)*pond_area,
+    et=(et/1000)*pond_area,
+    sd=(sd/1000)*pond_area,
+    sgw=(sgw/1000)*pond_area,
+    sm=(sm/1000)*pond_area,
+    scr=(scr/1000)*pond_area,
+    sr=(sr/1000)*pond_area,
+    ssr=(ssr/1000)*pond_area)
 
 
 return(df)
