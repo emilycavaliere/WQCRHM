@@ -3,5 +3,6 @@
 export(getHRUparameters)
 export(getpondsizes)
 export(manipin)
+export(manipoutst)
 import(CRHMr)
 import(tidyverse)
