@@ -2,7 +2,7 @@
 #'
 #' @param CRHM_output_file has all the crhm stuff
 #' @param returned extracted values for area and sd_max
-#' @import  tidyverse
+#' @import  tidyverse CRHMr
 #' @return Pond area, perimeter and depth on the parabola using CRHMr
 #' @export
 #'
