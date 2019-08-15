@@ -10,7 +10,7 @@ getHRUparameters(prj_file)
 \item{prj_file}{Name of prj file}
 }
 \value{
-Returns a list containing: HRU_name, HRU_SD_max, HRU_area
+Returns a list containing: HRU_name, HRU_SD_max, HRU_area HRU_Volume
 }
 \description{
 Reads parameters from CRHM .prj file
