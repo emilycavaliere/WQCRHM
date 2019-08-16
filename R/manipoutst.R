@@ -32,8 +32,7 @@ pht.outst<-data_wide
 
 #Aggregate Daily values----
 #out and storage----
-names(pht.outst)
-head(pht.outst)
+
 temp.outst<-pht.outst %>%
   group_by(hru, date) %>%
   summarize(
