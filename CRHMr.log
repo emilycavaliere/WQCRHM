@@ -211,3 +211,19 @@
 2019-08-16_10:41:31 readOutputFile outputFile:../1. CRHM_output_state_variable_PHT_baseline.txt Timezone:Etc/GMT+7 
 2019-08-16_10:41:39 aggDataframe dataframe:CRHM_output Aggfuns:mean period:daily file:NA 
 2019-08-16_10:41:39 wetland_pond_size CRHM_output:CRHM_daily 
+2019-08-16_10:53:01 readPrjDimensions prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_10:53:01 readPrjHRUnames: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_10:53:01 readPrjParameters prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_10:53:01 readPrjParameters prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_10:53:17 makeRegular obs:output 
+2019-08-16_10:53:18 readOutputFile outputFile:../1. CRHM_output_state_variable_PHT_baseline.txt Timezone:Etc/GMT+7 
+2019-08-16_10:53:25 aggDataframe dataframe:CRHM_output Aggfuns:mean period:daily file:NA 
+2019-08-16_10:53:25 wetland_pond_size CRHM_output:CRHM_daily 
+2019-08-16_11:44:14 readPrjDimensions prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_11:44:15 readPrjHRUnames: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_11:44:15 readPrjParameters prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_11:44:15 readPrjParameters prjFile: ../sim1 Final_2_Cluster1_PTH_100km2_VRB_Edmonton_WFDEI-GEM_new_sub14_baseline.prj 
+2019-08-16_11:44:31 makeRegular obs:output 
+2019-08-16_11:44:32 readOutputFile outputFile:../1. CRHM_output_state_variable_PHT_baseline.txt Timezone:Etc/GMT+7 
+2019-08-16_11:44:41 aggDataframe dataframe:CRHM_output Aggfuns:mean period:daily file:NA 
+2019-08-16_11:44:41 wetland_pond_size CRHM_output:CRHM_daily 
