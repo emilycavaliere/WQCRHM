@@ -7,14 +7,12 @@
 #'
 #' @examples \dontrun
 wbcalc<-function(df){
-
-f.df<-df%>%
-  group_by(date, hru) %>%
-  mutate(inflow = rowSums(cbind(mr, mi, rr, ri, condense,isd,isr), na.rm = T),
-         out = rowSums(cbind(sr), na.rm = T),
-         outflow = rowSums(cbind(sr,sgw,ssr,et), na.rm = T)#total outflow, would only use sr for my calcs
-  )
-
-f.df$outflow<-as.numeric(f.df$out-f.df$rre)#Main outflow variable from a wetland is soil runoff ( ), but a portion of this returns back as  redirected residual
+  outflow<-cbind(df$sr,df$sgw,df$ssr,df$et)
+  df$outflow = rowSums(outflow)
+  inflow<-cbind(df$mr, df$mi, df$rr, df$ri, df$condense,df$isd,df$isr, df$rre)
+  df$inflow = rowSums(inflow)
+  df$out=df$sr
+df$out.rre<-as.numeric(df$out-df$rre)#Main outflow variable from a wetland is soil runoff ( ), but a portion of this returns back as  redirected residual
+f.df<-df
 return(f.df)
 }
