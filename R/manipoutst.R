@@ -26,8 +26,6 @@ temp.pht.outst<-dl.outst %>%
 #from long to wide (again)----
 
 data_wide <- spread(temp.pht.outst, key=variable, value=measurement, fill=NA)
-head(data_wide)
-summary(data_wide)
 pht.outst<-data_wide
 
 #Aggregate Daily values----
@@ -36,9 +34,9 @@ pht.outst<-data_wide
 temp.outst<-pht.outst %>%
   group_by(hru, date) %>%
   summarize(
-    gw=mean(gw),
+    gw = mean(gw[Hours=="00:00"], na.rm = T),
     et=sum(hru_actet),
-    sd=mean(Sd),
+    sd = mean(Sd[Hours=="00:00"], na.rm = T),
     sgw=sum(soil_gw),
     sm=sum(soil_moist),
     scr=sum(soil_rechr),
