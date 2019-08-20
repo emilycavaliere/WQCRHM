@@ -49,7 +49,7 @@ getpondsizes <- function(CRHM_output_file, returned) {
   ps.w<-merge(ps.w, sd, by=c("date","hru"))
   ps.w$crhm_area<-ps.w$returned.HRU_area*1000000
   ps.w$sd.m<-ps.w$sd.mm/1000
-  ps.w$volume<-ps.w$crhm_area*ps.w$sd.m
+  #ps.w$volume<-ps.w$crhm_area*ps.w$sd.m
 
   return(ps.w)
 }
