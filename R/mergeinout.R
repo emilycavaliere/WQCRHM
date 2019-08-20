@@ -48,7 +48,7 @@ df$scr=(df$scr/1000)*df$crhm_area
 df$sr=(df$sr/1000)*df$crhm_area
 df$ssr=(df$ssr/1000)*df$crhm_area
 
-
+df$pond_volume=df$sd*df$crhm_area
 
 return(df)
 }
