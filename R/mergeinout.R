@@ -31,22 +31,22 @@ df$month<-month(df$date)
 
 #fix units:----
 
-df$condense=(df$condense/1000)*df$pond_area
-df$isd=(df$isd/1000)*df$pond_area
-df$isr=(df$isr/1000)*df$pond_area
-df$ri=(df$ri/1000)*df$pond_area
-df$mr=(df$mr/1000)*df$pond_area
-df$rre=(df$rre/1000)*df$pond_area
-df$rr=(df$rr/1000)*df$pond_area
-df$mi=(df$mi/1000)*df$pond_area
-df$gw=(df$gw/1000)*df$pond_area
-df$et=(df$et/1000)*df$pond_area
+df$condense=(df$condense/1000)*df$crhm_area
+df$isd=(df$isd/1000)*df$crhm_area
+df$isr=(df$isr/1000)*df$crhm_area
+df$ri=(df$ri/1000)*df$crhm_area
+df$mr=(df$mr/1000)*df$crhm_area
+df$rre=(df$rre/1000)*df$crhm_area
+df$rr=(df$rr/1000)*df$crhm_area
+df$mi=(df$mi/1000)*df$crhm_area
+df$gw=(df$gw/1000)*df$crhm_area
+df$et=(df$et/1000)*df$crhm_area
 df$sd=(df$sd/1000)
-df$sgw=(df$sgw/1000)*df$pond_area
-df$sm=(df$sm/1000)*df$pond_area
-df$scr=(df$scr/1000)*df$pond_area
-df$sr=(df$sr/1000)*df$pond_area
-df$ssr=(df$ssr/1000)*df$pond_area
+df$sgw=(df$sgw/1000)*df$crhm_area
+df$sm=(df$sm/1000)*df$crhm_area
+df$scr=(df$scr/1000)*df$crhm_area
+df$sr=(df$sr/1000)*df$crhm_area
+df$ssr=(df$ssr/1000)*df$crhm_area
 
 
 
